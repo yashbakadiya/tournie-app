@@ -1,0 +1,43 @@
+{% extends "part/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder">
+        <div class="sec-create">
+            <div class="w-100">
+                <div class="sec-boxes-01">
+                    <div class="mid-align-01">
+                        <div class="boxes-01">
+                            {% for org in organizes %}
+                            <div class="card-org">
+                                <img class="banner-img" src="{{ org.banner.url }}">
+                                <div class="pl-2 pb-3">
+                                  <div class="heading-01"><big>{{ org.tournament_name }}</big></div>
+                                  <div class="game-type">
+                                    <p>{{ org.discipline }} <small>({{ org.size }} {{ org.participants }})</small></p>
+                                  </div>
+                                  <div class="prize-pool">
+                                      <div class="row">
+                                        <div class="col-md-7"><i class="fas fa-trophy fa-lg"></i> {{ org.prize_pool }} Rs.</div>
+                                        <a class="button" href="{% url 'organize-detail' pk=org.pk %}">
+                                          <div class="col-md-5">Register</div>
+                                        </a>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}

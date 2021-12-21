@@ -1,0 +1,27 @@
+{% extends "part/base.html" %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder">
+        <div class="sec-acc pad-rig">
+            <div class="w-100">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Delete</legend>
+                        <h2>Are you sure you want to delete it "{{ object.tournament_name }}"</h2>
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                        <a class="btn btn-outline-secondary" href="{% url 'organize-detail' object.id %}">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+{% endblock content %}

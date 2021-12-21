@@ -1,0 +1,44 @@
+{% extends "part/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder">
+        <div class="sec-create">
+            <div class="w-100">
+                <div class="sec-boxes-01">
+                    <div class="mid-align-01">
+                        <div class="boxes-01">
+                            {% for partii in participant %} 
+                            {% if partii.tournament_Name %}
+                            {% if partii.author == user %}
+                                <div class="card-view">
+                                    <div class="heading-01">
+                                        <h2>
+                                            {{partii.tournament_Name}}
+                                        </h2>
+                                    </div>
+                                    <div class="game-type">
+                                        <p>{{ partii.contact_No }}</p>
+                                    </div>
+                                    <div class="prize-pool">
+                                        <p>{{ partii.email }}</p>
+                                    </div>
+                                    <div class="size-part"><small>{{ org.size }} {{ org.participants }}</small></div>
+                                </div>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}

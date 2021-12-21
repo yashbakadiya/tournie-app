@@ -1,0 +1,83 @@
+{% extends "part/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder">
+        <div class="sec-acc">
+            <div class="w-100">
+                <div class="row">
+                    <div class="col-md-7">
+                        <table>
+                            <tr>
+                                <td><img class="rounded-circle account-img" src="{{ user.profile.image.url }}"></td>
+                                <td>
+                                    <h2 class="account-heading">{{ user.username }}
+                                        {% if user.profile.nick_name != '' %}
+                                        ({{ user.profile.nick_name }})
+                                        {% endif %}
+                                    </h2>
+                                    <p class="text-color">{{ user.email }}</p>
+                                    {% if user.profile.youtube_account != '' %}
+                                    <a class="youtube-ml" href="{{ user.profile.youtube_account }}"><i id="yt"
+                                            class="fab fa-youtube"></i></a>
+                                    {% endif %}
+                                    {% if user.profile.instagram_account != '' %}
+                                    <a class="instagram-ml" href="{{ user.profile.instagram_account }}"><i id="ins"
+                                            class="fab fa-instagram"></i></a>
+                                    {% endif %}
+                                    {% if user.profile.facebook_Account != '' %}
+                                    <a class="facebook-ml" href="{{ user.profile.facebook_Account }}"><i id="face"
+                                            class="fab fa-facebook"></i></a>
+                                    {% endif %}
+                                    {% if user.profile.twitter_account != '' %}
+                                    <a class="twitter-ml" href="{{ user.profile.twitter_account }}"><i id="twi"
+                                            class="fab fa-twitter"></i></a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pt-1">
+                            {% if user.profile.achievements != '' %}
+                            <big>Achievements : </big>
+                            <small>{{ user.profile.achievements }}</small>
+                            {% elif user.profile.achievements == 'None' %}
+                            <big>Achievements : </big>
+                            <small>{{ user.profile.achievements }}</small>
+                            {% endif %}
+                        </div>
+                        <div class="pt-2">
+                            {% if user.profile.fav_game != '' %}
+                            <big>Favorite Games : </big>
+                            <small>{{ user.profile.fav_game }}</small>
+                            {% elif user.profile.fav_game == 'None' %}
+                            <big>Favorite Games : </big>
+                            <small>{{ user.profile.fav_game }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="row">
+                <div class="ml-4 col-md-6">
+                    {% if user.profile.introduction %}
+                    <legend class="border-bottom mb-4">Introduce</legend>
+                    <p class="border-bottom mb-4 pb-4">{{ user.profile.introduction }}</p>                    
+                    {% endif %}
+
+                </div>
+                <div class="col-md-5">
+                    <a class="txt-un" href="{% url 'profile' %}"><div class="up-bt text-center">Update</div></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}

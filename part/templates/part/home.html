@@ -1,0 +1,169 @@
+{% extends "part/base.html" %}
+{% block content %}
+<section class="py-5 d-flex align-items-center" id="one">
+  <!-- Background video -->
+  <div class="video-background-holder">
+    <div class="video-background-overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source
+        src="https://storage.coverr.co/videos/9vwyPTjd9E01rPT2osOvo6eLwMaqQ348W?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjM1NjY0MTg0fQ.YgBjDXJqvCQHoiCZaOBz8k4AzYVVD2YKW9dr9SLHSPg"
+        type="video/mp4">
+    </video>
+    <div class="video-background-content container h-100">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}" align="center">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <h1 class="display-4">Gamers Clash</h1>
+          <p class="lead mb-0">Participate and Organize at one place</p>
+          <table class="top-mr-tbl" align="center">
+            <tr>
+              <td>
+                <a href="{% url 'register' %}" class="text-color">
+                  <div class="sub-1">
+                    Join Now
+                  </div>
+                </a>
+              </td>
+              <td>
+                <a href="{% url 'take-participate' %}" class="text-color">
+                  <div class="sub-1">
+                    Participate
+                  </div>
+                </a>
+              </td>
+              <td>
+                <a href="{% url 'organize' %}" class="text-color">
+                  <div class="sub-1">
+                    Organize
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End -->
+</section>
+<section class="py-3 d-flex align-items-center" id="one">
+  <div class="background-holder-1">
+    <div class="sec-boxes-01">
+      <div class="mid-align-01">
+        <div class="boxes-01">
+          {% for org in organizes %}
+          <div class="card-org">
+            <img class="banner-img" src="{{ org.banner.url }}">
+            <div class="pl-2 pb-3">
+              <div class="heading-01"><big>{{ org.tournament_name }}</big></div>
+              <div class="game-type">
+                <p>{{ org.discipline }} <small>({{ org.size }} {{ org.participants }})</small></p>
+              </div>
+              <div class="prize-pool">
+                  <div class="row">
+                    <div class="col-md-7"><i class="fas fa-trophy fa-lg"></i> {{ org.prize_pool }} Rs.</div>
+                    <a class="button" href="{% url 'organize-detail' pk=org.pk %}">
+                      <div class="col-md-5">Register</div>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 d-flex align-items-center" id="four">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/xymtjR8VBaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/rXVCv3TIfRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/xjvSMTkq5wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section class="py-5 d-flex align-items-center" id="five">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-8 mx-auto">
+                <div class="p-5 bg-white shadow rounded">
+                    <!-- Bootstrap carousel-->
+                    <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+                        <!-- Bootstrap carousel indicators [nav] -->
+                        <ol class="carousel-indicators mb-0">
+                            <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Bootstrap inner [slides]-->
+                        <div class="carousel-inner px-5 pb-4">
+                            <!-- Carousel slide-->
+                            <div class="carousel-item active">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-1.jpg" alt="" width="75">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <footer class="blockquote-footer">Someone famous in
+                                                <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel slide-->
+                            <div class="carousel-item">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-3.jpg" alt="" width="75">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <footer class="blockquote-footer">Someone famous in
+                                                <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel slide-->
+                            <div class="carousel-item">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://bootstrapious.com/i/snippets/sn-slider-quote/avatar-2.jpg" alt="" width="75">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <footer class="blockquote-footer">Someone famous in
+                                                <cite title="Source Title">Source Title</cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Bootstrap controls [dots]-->
+                        <a class="carousel-control-prev width-auto" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left text-dark text-lg"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next width-auto" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <i class="fa fa-angle-right text-dark text-lg"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}

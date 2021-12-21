@@ -1,0 +1,53 @@
+{% extends "part/base.html" %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-view">
+        <div class="sec-view pad-rig">
+            <div class="w-100">
+                {% for partit in participant %}
+                <div class="border mb-2 pb-2 pl-2">
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        <h3>
+                            {{partit.player_Name}}
+                        </h3>
+                        <h3>
+                            {{partit.team_Name}}
+                        </h3>
+                        <h1>
+                            {{partit.connect}}
+                        </h1>
+                            {{partit.email}}<br>
+                            {{partit.contact_No}}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="pt-4">
+                                <div class="pt-4">
+                                    <table>
+                                        <tr class="gap">
+                                            <th>{{partit.player_1_IGN}}</th>
+                                            <th>{{partit.player_2_IGN}}</th>
+                                            <th>{{partit.player_3_IGN}}</th>
+                                            <th>{{partit.player_4_IGN}}</th>
+                                            <th>{{partit.player_5_IGN}}</th>
+                                            <th>{{partit.player_6_IGN}}</th>
+                                            <th>{{partit.player_7_IGN}}</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+{% endblock content %}

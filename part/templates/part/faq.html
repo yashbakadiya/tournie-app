@@ -1,0 +1,259 @@
+{% extends "part/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder-22">
+        <div class="sec-create">
+            <div class="w-100 pl-4 ml-4">
+                <h1 align="center">
+                    <big>
+                        Rule Book
+                    </big>
+                </h2>
+                <h3>
+                    TABLE OF CONTENTS
+                </h3>
+                <pre>
+                    -Introduction
+                     -General Rules
+                    -Tournament Schedule
+                    -Punctuality
+                    -Match Postponement & Cancellation
+                    -Penalty/Disqualification/Walkover
+                    -Tournament Progression
+                    -Registration
+                    -Open Qualifiers
+                    -Grand Finals
+                    -Match Rules
+                    -General
+                    -Game Settings
+                    -Code of Conduct
+                    -General
+                    -Sportsmanship & Proper Behavior
+                    -Discrimination & Denigration
+                    -Concluding the Competition
+                    -Competitive Integrity Measures
+                    -General
+                    -Sanctions
+                    -General
+                    -Infraction Points
+                    -Competitive Integrity
+                    -In-Game Bugs Abuse
+                    -Disclaimer
+                    -Finality of Decisions
+                    -Rule Changes
+                </pre>
+                <h3>
+                    INTRODUCTION
+                </h3>
+                <pre>
+                    GENERAL RULES
+                        Free Fire Esportz Premier Series Tournament is an Online Tournament.
+                        All teams are required to read the tournament rules and regulations.
+                        Participation in the tournament signifies that the team agrees to abide by all the rules
+                        and regulations.
+                        Any team that violates the rules will be disqualified from the tournament.
+                        By joining any tournaments organized by Esportz, all teams and participants will allow
+                        Esportz to use their image (team logos, participant photos, interview videos etc.) in
+                        promotional materials.
+                    Punctuality
+                        All Teams & Players must be in the lobby of the custom room and be ready to play no
+                        later than 5 minutes before the match starts. If a team is not ready they will be
+                        penalised.
+                    Match Postponement or Cancellation
+                        Matches will begin as scheduled and briefed unless prior notice is given by Esportz org
+                        regarding postponement or cancellation
+                    Penalty/Disqualification/Walkover
+                        Teams that are late/not present at the designated time of the match, are considered to
+                        be Walkover.
+                        Teams that infringe on the rules will be punished and penalized.
+                </pre>
+                <h3>
+                    TOURNAMENT PROGRESSION
+                </h3>
+                <pre>
+                    Registration
+                        ❖ Registration is free of charge.
+                        ❖ Registration will be done through Esportz.in Portal.
+                        ❖ Minimum level 40 is required to enter the Match Lobby.
+                        ❖ Participants must use a personal account when registering.
+                        ❖ Each participant can be a member of only one team in the tournament.
+                        ❖ Team names and nicknames in the game must not contain any explicit/vulgar words.
+                        ❖ A team must consist of a minimum of four members and maximum of six members.
+                        ❖ All matches are in Battle Royale Squad Mode.
+                    After Registration
+                        ❖ Registered team members can’t be changed/replaced.
+                        Teams are only allowed to play with players who have been registered. Teams
+                        found using multiple accounts will be disqualified.
+                        ❖ The use of VPNs and other supporting network connectivity applications is not
+                        advisable.
+                        ❖ Players are responsible for their own internet connection and Esportz Premier
+                        Series org will not be responsible for any network or connection issues.
+                    Tournament Format
+                        ❖ Duration of the Tournament will be 15 Days.
+                        ❖ 144 Total Teams.
+                        ❖ Week 1 (Qualifiers) - throughout 6 days everyday 6 matches will be played. [Top 2 teams
+                        from each group will proceed to Group Stage]
+                        ❖ Week 2 (Group Stage) - throughout 6 days everyday 4 matches will be played. [Top 6
+                        from each group will qualify to Grand Finals]
+                        ❖ Grand Finals - for the last 3 days, 5 matches will be played each day.
+                    Points Calculation
+                        Teams will be ranked in their separate groups.
+                        Teams will be allocated points based on points earned at the end of each match.
+                    Tiebreaker
+                        If 2 teams have the same match score, the placement point will be the tiebreaker.
+                        If 2 teams have the same points in your group, the total match points will be the
+                        tiebreaker, followed by the total placement points.
+                </pre>
+                <div class="pt-tbl">
+                    <img src="/media/point_table.png">
+                </div>
+                <pre>
+                    Game Settings
+                        Squad Mode Battle Royale
+                        Squad Size: Minimum 4 Members and Maximum of 6 players(4 Players and 2
+                        Substitute)
+                        Gun Properties: Off
+                </pre>
+                <h3>MATCH RULES
+                </h3>
+                <pre>
+                    General
+                        Players can use supporting items in the game such as load outs, characters, slot
+                        character skills and other skins.
+                        Gun properties will be disabled throughout all matches in the Open Qualifier & Grand
+                        Finals.
+                        Use of emulators (Bluestacks, Nox, Memu, etc.) & Ipad is prohibited during the
+                        tournament.
+                        Use of illegal programs is prohibited.
+                        It is forbidden to use additional or supporting devices, such as a gamepad or additional
+                        buttons such as Controller R1 - L1 and others during the matches.
+                        Flaming / cheating / toxic behaviour is not tolerated. Warnings will be given to the teams
+                        that commit such offences. Repeated offences will result in penalties.
+                        Teaming is prohibited. Any team that participates in teaming will be penalized.
+                        The match will continue if a player disconnects or faces any other in-game errors.
+                </pre>
+                <h3>
+                    CODE OF CONDUCT
+                </h3>
+                <pre>
+                    General
+                        To maintain a healthy and fair esports ecosystem, it is important for players to behave
+                        with a positive attitude towards the Tournament Admin and other players throughout the
+                        tournament
+                    Sportsmanship & Proper Behavior
+                        Participants may not use language that is obscene, foul, vulgar, insulting, threatening,
+                        abusive, libelous, defamatory, or otherwise offensive or objectionable, in or near the
+                        match area. Participants are not allowed to use this type of language during any
+                        public-facing events, such as interviews. Each offense will incur one to two infraction
+                        points, as deemed appropriate by Tournament Admins.
+                        Abuse of Tournament Admins, other participants, or audience members will not be
+                        tolerated. Repeated violations, including but not limited to verbal abuse, touching
+                        another participant’s devices, body, or property will result in infraction point penalties.
+                        Participants and their guests (if any) must treat all individuals attending a match with
+                        respect.
+                    Discrimination & Denigration
+                        Competitors shall not offend the dignity or integrity of a country, private person, or group
+                        of people through contemptuous or discriminatory words or actions based on race,
+                        ethnicity, national origin, social origin, gender, language, religion, political opinion,
+                        financial status, birth status, sexual orientation, or any other reason.
+                        Offenders may be immediately disqualified, have up to half of their monetary winnings
+                        forfeited, or both of the above
+                    Concluding the Competition
+                        Upon initiating participation in a Competition, Teams and Competitors shall continue to
+                        participate in the Competition to its conclusion. Teams and Competitors shall not refuse
+                        to participate in the tournament for any reason including, without limitation,
+                        disagreement with a decision by Garena officials, an accusation of competitive integrity
+                        of the tournament, or imperfect playing conditions.
+                        Offenders may have to forfeit the entirety of their monetary winnings from Esportz
+                        event, be banned from future Esports events, or both of the above.
+                </pre>
+                <h3>COMPETITIVE INTEGRITY MEASURES
+                </h3>
+                <pre>
+                    General
+                        To ensure competitive integrity, players will be required to follow the steps that will be
+                        provided by Tournament Admins
+                        These steps may include:
+                        Monitoring of phone activities during matches
+                        Recording and live streaming of player’s POV
+                        Collection and verification of player’s national identification documents
+                        Teams who fail to comply with the competitive integrity measures will not be allowed to
+                        play and consequently be disqualified
+                </pre>
+                <h3>SANCTIONS</h3>
+                <pre>
+                    General
+                        Unless otherwise specified in the provisions of this Rulebook, when a Player or Team
+                        has violated one or several rules, this section will be referred to for the appropriate
+                        penalty, where all general penalties are listed and listed in the catalog
+                    Infraction Point
+                        Light Sanctions - 5 Match Points penalty
+                        Moderate Sanctions - 10 Points penalty
+                        Heavy Sanctions - 15 Points penalty
+                        Severe Sanctions - Disqualified
+                        Extraordinary Sanctions - Blacklist
+                    Competitive Integrity
+                        All participants are expected to play at their best at all times within any match of Free
+                        Fire in any tournaments conducted by Esportz. Offenders who violate this rule will be
+                        subject to penalties from light sanction to extraordinary sanction at the sole discretion of
+                        Tournament Admin. The following examples are a non-exhaustive list of offenses:
+                        Collusion - Participants who cooperate with others, including other competing
+                        participants to cheat or deceive and gain an unfair advantage are guilty of collusion.
+                        Acts of collusion include, but are not limited to:
+                        Soft play - Any agreement among participants to not play at a reasonable or expected
+                        standard of competition in a game
+                        Prior arrangements to split prize money and any other forms of compensation
+                        Receiving information and signals from outside sources during a match
+                        Deliberately losing any match for compensation
+                        Hacking - Any modification of the Garena Free Fire game client, including using any
+                        3rd party apps to grant in-game advantages
+                        Exploiting - Deliberate abuse of in-game bug to gain an advantage
+                        Looking at spectator monitors or mobile phones of other participants
+                        Smurfing - Using another player or participant’s account
+                        Intentional disconnect without any officials’ approval
+                    In-Game Bugs Abuse
+                        In the event whereby a player were to encounter a bug, a remake will only be
+                        offered when all of the following conditions are met:
+                        The bug is game-breaking and causes a player (or multiple players) to be unable to play
+                        the game in a normal manner. A non-exhaustive list of game-breaking bugs include:
+                        Being clipped through the floor and executed
+                        Being stuck on objects (windows, launchers, etc)
+                        Being killed by fall damage after unexpected behaviors from driving vehicles
+                        The Tournament Admin promptly notified of the bug when it occurs.
+                        The bug occurs when no other players in the match have been killed yet.
+                        The bug is not triggered with malicious intent by the player.
+                        The following bugs will lead to an immediate punishment:
+                        Forcefully spawning a Gloo Wall at a location you have no direct line of vision to - for
+                        example, throwing the Gloo Wall at a building’s wall from outside to force-spawn a
+                        portion of the Wall inside the building, or to throw the Gloo Wall at the ceiling of a
+                        building to force-spawn the Wall on the floor above.
+                        Killing of an enemy who is in down-state by shooting at the area above him
+                        Any remake will be offered only at the sole discretion of the Tournament Admin
+                        Teams who deliberately abused the bugs may be immediately disqualified, have their
+                        monetary winnings forfeited, or both of the above
+                </pre>
+                <h3>DISCLAIMER</h3>
+                <pre>
+                    Finality of Decision
+                        All decisions regarding the interpretation of these rules, player eligibility, scheduling of
+                        the tournament, and penalties for misconduct, lie solely with Tournament Admin, the
+                        decisions of which are final.
+                    Rule Changes
+                        These rules may be amended, modified or supplemented by Tournament Admin, from
+                        time to time, in order to ensure fair play and the integrity of the tournament.
+                </pre>
+
+                   
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+
+{% endblock content %}

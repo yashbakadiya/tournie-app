@@ -1,0 +1,28 @@
+{% extends "part/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-org">
+        <div class="sec-org-form">
+            <div class="w-100">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Create tournament</legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group" align="center">
+                        <button class="btn btn-outline-info" type="submit">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends "part/base.html" %}
+{% block content %}
+<section class="py-copy py-5 d-flex align-items-center" id="one">
+    <!-- Background video -->
+    <div class="background-holder">
+        <div class="sec-org">
+            <div class="w-100">
+                <div class="sub-sec">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="no-unline" href="{% url 'participants' %}">
+                                <div class="card-01">
+                                    <i class="fas fa-eye"></i>
+                                    <div class="org-color pt-3">View</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="no-unline" href="{% url 'organize' %}">
+                                <div class="card-01">
+                                    <i class="fas fa-plus"></i>
+                                    <div class="org-color pt-3">Create new tournament</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div><br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                                    <a class="no-unline" href="{% url 'faq' %}">
+                                        <div class="card-01">
+                                            <i class="fas fa-question"></i>
+                                            <div class="org-color pt-3">FAQ and Guide</div>
+                                        </div>
+                                    </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="no-unline" href="{% url 'post' %}">
+                                <div class="card-01">
+                                    <i class="fas fa-mail-bulk"></i>
+                                    <div class="org-color pt-3">Posts</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cb6e4963a5.js" crossorigin="anonymous"></script>
+{% endblock content %}
