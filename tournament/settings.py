@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1']
 INSTALLED_APPS = [
     'part.apps.PartConfig',
     'crispy_forms',
+    "crispy_bootstrap4",
     'phone_field',
     'easy_pdf',
     'django.contrib.admin',
@@ -104,6 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 # Internationalization
@@ -119,6 +121,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
