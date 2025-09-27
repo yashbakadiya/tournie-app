@@ -357,9 +357,13 @@ a.no-unline{
   float: left;
   margin-right: 29px;
   margin-bottom: 29px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
 }
 
 .boxes-01 > .card-org:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
@@ -375,12 +379,23 @@ a.no-unline{
 }
 
 .card-org{
-  width: fit-content;
+  width: 270px;
   height: auto;
   color: #f3f3f3;
   background-color: #202020;
   border-radius: 4px;
-  padding:0px;
+  padding: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-org .pl-2 {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-view{
@@ -474,6 +489,10 @@ a.txt-un:hover{
   height: 270px;
   width: 270px;
   margin-bottom: 16px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+  display: block;
+  background-color: #333;
 }
 
 .alert{

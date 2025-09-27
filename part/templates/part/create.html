@@ -11,7 +11,7 @@
                         <div class="boxes-01">
                             {% for org in organizes %}
                             <div class="card-org">
-                                <img class="banner-img" src="{{ org.banner.url }}">
+                                <img class="banner-img" src="{{ org.banner.url }}" alt="{{ org.tournament_name }} banner" loading="lazy">
                                 <div class="pl-2 pb-3">
                                   <div class="heading-01"><big>{{ org.tournament_name }}</big></div>
                                   <div class="game-type">
